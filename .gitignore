@@ -1,0 +1,104 @@
+############################################################################
+# Security Related Excludes Custom IGNORE File                             #
+############################################################################
+/.htaccess
+desktop.ini
+*.log
+.user
+web
+/samplecode/web-config.php
+############################################################################
+# Word Press Custom IGNORE File                                            #
+############################################################################
+wp-config.php
+/wp/wp-config.php
+/wp/license.txt
+/wp/readme.html
+/wp/sitemap.xml
+/wp/sitemap.xml.gz
+/wp/wp-content/advanced-cache.php
+/wp/wp-content/backup-db/
+/wp/wp-content/backups/
+/wp/wp-content/blogs.dir/
+/wp/wp-content/cache/
+/wp/wp-content/upgrade/
+/wp/wp-content/uploads/
+/wp/wp-content/mu-plugins/
+/wp/wp-content/wp-cache-config.php
+/wp/wp-content/plugins/hello.php
+
+############################################################################
+# Visual Studio 2017 IGNORE FIle for MVC Compiled Sources                  #
+############################################################################
+*.com
+*.class
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.cache
+*.suo
+# Include dlls if they’re in the NuGet packages directory
+!/packages/*/lib/*.dll
+!/packages/*/lib/*/*.dll
+# Include dlls if they're in the CommonReferences directory
+!*CommonReferences/*.dll
+####################
+# VS Upgrade stuff #
+####################
+UpgradeLog.XML
+_UpgradeReport_Files/
+###############
+# Directories #
+###############
+bin/
+obj/
+TestResults/
+###################
+# Web publish log #
+###################
+*.Publish.xml
+#############
+# Resharper #
+#############
+/_ReSharper.*
+*.ReSharper.*
+############
+# Packages #
+############
+# it’s better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+######################
+# Logs and databases #
+######################
+*.log
+*.sqlite
+# OS generated files #
+######################
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+[Bb]in
+[Oo]bj
+[Tt]est[Rr]esults
+*.suo
+*.user
+*.[Cc]ache
+*[Rr]esharper*
+packages
+NuGet.exe
+_[Ss]cripts
+*.exe
+*.dll
+*.nupkg
+*.ncrunchsolution
+*.dot[Cc]over

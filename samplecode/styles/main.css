@@ -1,0 +1,96 @@
+/* 
+    Created on : Jul 2, 2018, 10:18:39 AM
+    Modified on: Jul 24, 2018 11:26:00 AM
+    Author     : Jasen
+    Notes      : This was created for the purpose of demonstrating basic CSS and 
+                 not intended as an exhaustive expose of skills.
+*/
+/* HTML TAG & ELEMENT FORMATS */
+body{
+    background-color: black;
+}
+a{
+    color:#fc9e4f;
+    text-decoration: none;
+}
+div{
+    margin:10px;
+}
+h1{
+    font-size: 14pt;
+    color: grey;
+    text-align: center;
+    font-family: sans-serif font-family;
+}
+h2{
+    color:#fc9e4f;
+}
+li{
+    padding: 5px;
+}
+p{
+    font-family: serif font-family;
+}
+caption{
+    text-align: left;
+    font-style:italic;
+    color: gray;
+    font-size: 9pt;
+    
+}
+
+/* CSS ELEMENT CLASS FORMATS */
+.mainback{
+    background-color: black;
+    padding: 2px;
+}
+.content{
+    background-color:whitesmoke;
+    border:groove gray 2px;
+    padding:4px;
+    min-height: 600px;
+}
+
+.emphatic{
+    font-style: italic;
+    font-weight: bolder;
+    color: #fc9e4f;
+}
+
+.portrait{
+    max-height: 50%;
+    max-width: 50%;
+    border:groove white 1px;
+    background-color:white;
+    padding:1px;
+    margin-top: 25px;
+    margin-right:15px;
+}
+
+.samplearea{
+    border:#680000 dotted 1px;
+    background-color:white;
+    margin-left: 40px;
+}
+
+.manifesto{
+    font-style: italic;
+    color:black;
+}
+
+.youVersionContent{
+    background-color: #eeee88;
+    border-style: groove;
+}
+
+h3{
+    margin-left: 10px;
+}
+
+.systemNotification{
+    text-align:right;
+    color:red;
+    font-size:10pt;
+    font-style:italic;
+
+}

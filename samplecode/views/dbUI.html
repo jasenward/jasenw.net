@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Visitor Log</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/samplecode/styles/main.css">
+    </head>
+    <body>
+        <div class="mainback">
+            <div class="content">
+                <div class='samplearea'>
+                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+                    <script src="/samplecode/controllers/dbJSApp.js"></script>
+                    <h3><a href="http://www.jasenw.net" title="Return to main site.">Profile</a> &Gg; Database Connectivity</h3>
+                    <h1>Visitor Logger</h1><hr>
+                    <div ng-app="jasenApp" ng-controller="personCtrl">
+                        <table>
+                            <caption>
+                                <span class="emphatic" title="DO NOT PUT CONFIDENTIAL OR PRIVATE information in these fields">
+                                    Would you like to leave a record of your visit to this page? Simply fill out the
+                                    and click submit.
+                                </span>.
+                            </caption>
+                            <tr>
+                                <td colspan="2">
+                                    Company: <input type="text" ng-model="companyName">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    First Name: <input type="text" ng-model="firstName">
+                                </td>
+                                <td>
+                                    Last Name: <input type="text" ng-model="lastName">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td style="text-align: right;">
+                                    <input type="button" value="Submit" ng-click="callService(firstName,lastName,companyName)"/>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>
+                            Thank you <span class="emphatic">{{fullName()}}</span>
+                            <span class="emphatic">{{companyName}}</span> for visiting this page.
+                            Below is a list of the last ten visitors.
+                        </p>
+                        <div class="youVersionContent">
+                            <p ng-repeat="x in records">{{x}}</p>
+                        </div>
+                        <p class="systemNotification">{{jRevision}} by Jasen Ward.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

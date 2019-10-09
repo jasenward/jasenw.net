@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>YouVersion Lookup</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../styles/main.css">
+    </head>
+    <body>
+        <div class="mainback">
+            <div class="content">
+                <div class='samplearea'>
+                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+                    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
+                    <script src="/samplecode/controllers/bibleAP.js"></script>
+                    <h3><a href="http://www.jasenw.net" title="Return to main site.">Profile</a> &Gg; YouVersion Integration</h3>
+                    <h1>
+                        <a href="https://www.youversion.com" target="_blank">
+                            <img src="/samplecode/images/YouVersionMini.png" alt="YouVersion" width="50px" height="50px"/>
+                        </a><br/>
+                        Simple Gospel Verse Lookup
+                    </h1>
+                    <hr>
+                    <div ng-app="jasenApp" ng-controller="personCtrl">
+                        <p>
+                            Out of respect to YouVersion's <a href="https://help.youversion.com/l/en/article/q3nxobxftp-how-to-add-you-version-to-your-website" target="_blank">license restrictions</a>
+                            I have not implemented any form of automation on this lookup and it is offered free of charge
+                            as a demonstration of making calls to external API's to retrieve data.
+                        </p><p>
+                            To use this tool simply select a valid chapter and verse from the four gospels and click
+                            enter to retrieve the verse from YouVersion.
+                        </p>
+                        <table>
+                            <caption>
+                                Click submit to look up <span class="emphatic">{{bibleReference()}}</span> 
+                                from the <a href="https://www.youversion.com/">YouVersion</a> Site using their API.
+                            </caption>
+                            <tr>
+                                <td>
+                                    Book:
+                                    <select ng-model="book">
+                                        <option value="Matt">Matthew</option>
+                                        <option value="Mark">Mark</option>
+                                        <option value="Luke">Luke</option>
+                                        <option value="John">John</option>
+                                    </select>
+                                    <input type="hidden" ng-model="bookNumber">
+                                </td>
+                                <td>
+                                    Chapter:Verse <input type="text" ng-model="chapter">:<input type="text" ng-model="verse">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td style="text-align: right;">
+                                    <input type="button" value="Submit" ng-click="callService()"/>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="youVersionContent">
+                            <p>The reply from YouVersion will appear below:</p>
+                            <div ng-bind-html="bibleReply"></div>
+                        </div>
+                        <p class="systemNotification">{{jRevision}} by Jasen Ward.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
